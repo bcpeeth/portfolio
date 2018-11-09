@@ -19,7 +19,7 @@
 
   <div class="<?= $c->getPageWrapperClass() ?>">
     <div class="page__wrap">
-
+<section class="header">
         <input type="checkbox" name="nav-btn" id="nav-btn" />
         <span></span>
         
@@ -33,3 +33,4 @@
             </ul>
         </nav>
 
+</section>

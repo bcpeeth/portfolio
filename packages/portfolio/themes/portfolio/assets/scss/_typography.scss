@@ -30,23 +30,6 @@ textarea {
   font-family: futura-pt, sans-serif;
 }
 
-// .page__wrap {
-//   position: relative;
-//   z-index: 0;
-//   overflow: hidden;
-
-//   &:before {
-//     content: '';
-//     width: 100%;
-//     height: 100%;
-//     position: absolute;
-//     z-index: -2;
-//     left: 0;
-//     top: 0;
-//     background-color: $color-white;
-//   }
-// }
-
 
 //-----SIZE
 
@@ -57,7 +40,7 @@ $fs1: 1.5rem;           //----24px
 $fs2: 1.75rem;          //----28px
 $fs3: 2rem;             //----32px
 $fs4: 4rem;             //----64px
-
+$fs5: 5em;
 
 
 //-----COLOR
@@ -110,20 +93,19 @@ $fs4: 4rem;             //----64px
 //-----TAG
 
 h1, .h1 {
-  line-height: 1.4706rem;
-  margin-top: 0.7353rem;
-  margin-bottom: 0.0000rem;
-  font-weight: 200;
+  font-size: $fs5;
+  margin-top: 0;
+  margin-bottom: 0.5em;
 }
 
 h2, .h2 {
-  font-size: $fs3;
-  line-height: 1.1;
-  margin-bottom: 1.1rem;
+  // font-size: $fs3;
+  // line-height: 1.1;
+  // margin-bottom: 1.1rem;
 }
 
 h3, .h3 {
-  font-size: $fs2;
+  font-size: $fs4;
   line-height: 1.3;
   margin-bottom: 1rem;
 }
