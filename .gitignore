@@ -1,0 +1,15 @@
+# Finder Cache
+.DS_Store
+
+# SASS Cache
+.sass-cache
+
+# Concrete5 Cache
+application/files/cache
+application/files/tmp
+
+# Dependencies
+node_modules
+bower_components
+
+packages/portfolio/themes/portfolio/dist

@@ -1,0 +1,75 @@
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-yellow: #F6A800;
+$color-grey: #707070;
+$color-lightgrey: #F8F8F8;
+$color-orange: #F6A800;
+$color-bgtest: rgb(161, 161, 161);
+$color-lightblue: #49A4D6;
+$color-lightgreen: #4BB886;
+$color-green : #38C616;
+
+$padding: 50px;
+
+// Extra small devices (portrait phones, less than 576px)
+$breakpoint-max-xs: 575px;
+// Small devices (landscape phones, less than 768px)
+$breakpoint-max-sm: 767px;
+// Medium devices (tablets, less than 992px)
+$breakpoint-max-md: 991px;
+// Large devices (desktops, less than 1200px)
+$breakpoint-max-lg: 1199px;
+// Extra large devices (desktops, less than 1500px)
+$breakpoint-max-xl: 1499px;
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+@import "grid";
+@import "typography";
+@import "helpers";
+@import "owl";
+@import "header";
+@import "footer";
+@import "hero";
+
+
+.bg-yellow {
+    background-color: $color-yellow;
+}
+
+.bg-grey {
+    background-color: $color-grey;
+}
+
+.bg-lightgrey {
+    background-color: $color-lightgrey;
+}
+
+.bg-black {
+    background-color: $color-black;
+    z-index: -1;
+}
+
+// .page__wrap {
+//     overflow: hidden;
+// }
+
+.dark-overlay {
+    background-color: rgba(0, 0, 0, 0.212);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 500px;
+    width: 100%;
+    z-index: 5;
+    top: 0;
+    pointer-events: none;
+}
+

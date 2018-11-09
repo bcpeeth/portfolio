@@ -1,0 +1,251 @@
+*,
+*:after,
+*:before {
+  // -webkit-font-smoothing: antialiased;
+}
+
+@import url("https://use.typekit.net/gnb7cfv.css");
+
+
+html {
+  background-color: $color-white;
+  color: $color-black;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  line-height: 1.5625em;
+  overflow-x: hidden;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+input,
+button,
+textarea {
+  font-family: futura-pt, sans-serif;
+}
+
+// .page__wrap {
+//   position: relative;
+//   z-index: 0;
+//   overflow: hidden;
+
+//   &:before {
+//     content: '';
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     z-index: -2;
+//     left: 0;
+//     top: 0;
+//     background-color: $color-white;
+//   }
+// }
+
+
+//-----SIZE
+
+$fs-2: 0.75rem;         //----12px
+$fs-1: 0.875rem;         //----14px
+$fs0: 1rem;             //----16px
+$fs1: 1.5rem;           //----24px
+$fs2: 1.75rem;          //----28px
+$fs3: 2rem;             //----32px
+$fs4: 4rem;             //----64px
+
+
+
+//-----COLOR
+
+.white {
+  color: $color-white;
+}
+
+.black {
+  color: $color-black;
+}
+
+.yellow {
+  color: $color-yellow;
+}
+
+.grey {
+  color: $color-grey;
+}
+
+.lightblue {
+  color: $color-lightblue;
+}
+
+.lightgreen {
+  color: $color-lightgreen;
+}
+
+//-----WEIGHT
+
+.thin {
+  font-weight: 200;
+}
+
+.fat {
+  font-weight: 900;
+}
+
+.quote {
+  font-size: $fs1;
+  font-weight: 400;
+  line-height: 0.7;
+}
+
+// .section-title {
+//   text-transform: uppercase;
+// }
+
+
+//-----TAG
+
+h1, .h1 {
+  line-height: 1.4706rem;
+  margin-top: 0.7353rem;
+  margin-bottom: 0.0000rem;
+  font-weight: 200;
+}
+
+h2, .h2 {
+  font-size: $fs3;
+  line-height: 1.1;
+  margin-bottom: 1.1rem;
+}
+
+h3, .h3 {
+  font-size: $fs2;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+h4, .h4 {
+  font-size: $fs2;
+  margin-top: 1.1364rem;
+  margin-bottom: 0.0000em;
+
+}
+
+h5, .h5 {
+  font-size: $fs1;
+  font-weight: bold;
+  margin-top: 1.3889rem;
+  margin-bottom: 0.0000em;
+}
+
+@media screen and (max-width: $breakpoint-max-sm) {
+
+  h1, .h1 {
+    font-size: $fs4;
+  }
+
+  h2, .h2 {
+    font-size: $fs3;
+  }
+
+  h3, .h3 {
+    font-size: $fs2;
+  }
+
+  h4, .h4 {
+    font-size: $fs1;
+
+  }
+
+  h5, .h5 {
+    font-size: $fs0;
+  }
+
+}
+
+small, .small, figcaption {
+  font-size: $fs-1;
+}
+
+big, .big {
+  font-size: $fs1;
+  line-height: 1.25;
+  font-weight: 300;
+}
+
+p, .p {
+  //font-size: $fs-1;
+  // margin: 0 0 1.5625em 0;
+  //line-height: 1.3rem;
+}
+
+strong, .strong {
+  font-weight: 800;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+mark, .mark {
+  position: relative;
+  background-color: transparent;
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 40%;
+    bottom: 22%;
+    left: -2px;
+    right: -1px;
+  }
+}
+
+
+.section-header {
+
+  text-transform: uppercase;
+
+  &--yellow {
+    color: $color-yellow;
+  }
+
+  &-center {
+    text-transform: none;
+  }
+}
+@media screen and (max-width: $breakpoint-max-md) {
+  h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-max-sm) {
+  p, .p  {
+    text-align: left !important;
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 25px !important;
+  }
+
+  h3 { 
+    font-size: 20px;
+    text-align: left !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  .section-header {
+    h2 {
+      font-size: 1.5rem !important;
+    }
+  }
+}

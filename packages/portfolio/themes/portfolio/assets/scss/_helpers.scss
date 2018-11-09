@@ -1,0 +1,243 @@
+.flex__wrapper{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex__grow{
+  flex-grow: 1;
+}
+
+.no-border{
+  border: 0 none !important;
+}
+
+.no-padding{
+  padding: 0;
+}
+
+.space-between{
+  justify-content: space-between;
+}
+
+// small: 30px, medium: 37.5px, large: 60px
+
+$directions: (top, right, bottom, left);
+$sizes: (none: 0, x-nano: 8px, nano: 10px, half-step: 12.5px, step: 25px, 2-steps: 50px, 3-steps: 75px, );
+$mdSizes: (none: 0, x-nano: 8px, nano: 10px, half-step: 12.5px, step: 25px, 2-steps: 25px, 3-steps: 50px, );
+$smSizes: (none: 0, x-nano: 8px, nano: 10px, half-step: 12.5px, step: 25px, 2-steps: 30px, 3-steps: 25px, );
+
+@mixin createSizeHelperOf($property,
+  $sizes: $sizes,
+  $directions: $directions) {
+
+  @each $direction in $directions {
+    @each $sizeId, $size in $sizes {
+      .#{$property}--#{$direction}-#{$sizeId} {
+        #{$property}-#{$direction}: $size;
+      }
+    }
+  }
+
+  @each $direction in $directions {
+    @each $sizeId, $size in $sizes {
+      @media screen and (max-width: $breakpoint-max-lg) {
+        .#{$property}--lg-#{$direction}-#{$sizeId} {
+          #{$property}-#{$direction}: $size;
+        }
+      }
+
+      @media screen and (max-width: $breakpoint-max-md) {
+        .#{$property}--md-#{$direction}-#{$sizeId} {
+          #{$property}-#{$direction}: $size;
+        }
+      }
+
+      @media screen and (max-width: $breakpoint-max-sm) {
+        .#{$property}--sm-#{$direction}-#{$sizeId} {
+          #{$property}-#{$direction}: $size;
+        }
+      }
+
+      @media screen and (max-width: $breakpoint-max-xs) {
+        .#{$property}--xs-#{$direction}-#{$sizeId} {
+          #{$property}-#{$direction}: $size;
+        }
+      }
+    }
+  }
+}
+
+@include createSizeHelperOf(padding);
+@include createSizeHelperOf(margin);
+
+@media screen and (max-width: $breakpoint-max-md) {
+  @include createSizeHelperOf(padding, $mdSizes);
+  @include createSizeHelperOf(margin, $mdSizes);
+}
+
+@media screen and (max-width: $breakpoint-max-sm) {
+  @include createSizeHelperOf(padding, $smSizes);
+  @include createSizeHelperOf(margin, $smSizes);
+}
+
+.iframe-wrapper{
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  display: table;
+  width: 100%;
+  height: 100%;
+
+  &__cell {
+    display: table-cell;
+  }
+}
+
+.vertical {
+  &--align-middle {
+    vertical-align: middle;
+  }
+}
+
+.display {
+
+  &--none {
+    display: none;
+  }
+
+  &--none-imp {
+    display: none !important;
+  }
+
+  &--block {
+    display: block;
+  }
+
+  &--flex {
+    display: flex;
+
+    &__vertical-align{
+      align-items: center;
+      height: 100%;
+    }
+  }
+
+  &--inline-block {
+    display: inline-block;
+  }
+
+  @media screen and (max-width: $breakpoint-max-xs) {
+    &--xs-none {
+      display: none;
+    }
+
+    &--xs-block {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-max-sm) {
+    &--sm-none {
+      display: none !important;
+    }
+
+    &--sm-block {
+      display: block;
+    }
+
+    &--sm-inline-block {
+      display: inline-block;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-max-md) {
+
+    &--md-flex{
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &--md-none {
+      display: none;
+    }
+
+    &--md-block {
+      display: block;
+    }
+  }
+}
+
+.width {
+  &--stretch {
+    width: 100%;
+  }
+}
+
+.text {
+  &--align-left {
+    text-align: left;
+  }
+
+  &--align-center {
+    text-align: center;
+  }
+
+  &--align-right {
+    text-align: right;
+  }
+}
+
+.float {
+  &--left {
+    float: left;
+  }
+
+  &--right {
+    float: right;
+  }
+}
+
+.clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.order{
+  @media screen and (max-width: $breakpoint-max-md) {
+    &--md--1{
+      order: -1;
+    }
+  }
+
+}
+
+.position {
+
+  &--relative {
+    position: relative;
+  }
+
+  &--absolute {
+    position: absolute;
+  }
+}
+
+.pull-up {
+  z-index: 10;
+}
+
+.push-down {
+  z-index: -99999;
+}
+
+.object-fit_fill { object-fit: fill }
+.object-fit_contain { object-fit: contain }
+.object-fit_cover { object-fit: cover }
+.object-fit_none { object-fit: none }
+.object-fit_scale-down { object-fit: scale-down }
+

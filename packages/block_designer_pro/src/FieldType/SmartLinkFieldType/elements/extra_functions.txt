@@ -1,0 +1,20 @@
+protected function getSmartLinkTypeOptions($include = array(), $checkNone = false)
+	{
+		$options = array(
+			''      => sprintf("-- %s--", t("None")),
+			'page'  => t("Page"),
+			'url'   => t("External URL"),
+			'file'  => t("File"),
+			'image' => t("Image")
+		);
+		if ($checkNone) {
+            $include = array_merge(array(''), $include);
+        }
+		$return = array();
+		foreach($include as $v){
+		    if(isset($options[$v])){
+		        $return[$v] = $options[$v];
+		    }
+		}
+		return $return;
+	}

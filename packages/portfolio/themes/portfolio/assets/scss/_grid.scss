@@ -1,0 +1,93 @@
+@import "vendor/neat/neat";
+
+$neat-grid: (
+  columns: 12,
+  gutter: 10px,
+);
+
+$no-gutter-grid: (
+  columns: 12,
+  gutter: 0,
+);
+
+.grid__container {
+  @include grid-container;
+  max-width: 68.125rem;
+  margin: 0 auto;
+
+  &.display--flex{
+    &:after{
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-max-md) {
+    margin: 0;
+  }
+
+  &--style-fluid {
+    margin: 0;
+    max-width: 100%;
+    max-width: calc(100% + 20px);
+  }
+
+  &--iframe {
+    @include grid-container;
+    max-width: 1108px;
+    margin: 0 auto;
+  }
+}
+
+.grid__visual {
+  @include grid-visual;
+}
+
+.grid__collapse {
+  @include grid-collapse;
+}
+
+@for $i from 1 through 12 {
+  .grid__col--#{$i} {
+    @include grid-column($i of 12, $neat-grid);
+
+    &.grid__col--no-gutter {
+      @include grid-column($i of 12, $no-gutter-grid);
+    }
+  }
+}
+
+@for $i from 0 through 12 {
+  .grid__push--#{$i} {
+    @include grid-push($i of 12, $neat-grid);
+    // @media screen and (max-width: $breakpoint-max-md) {
+    //   margin-left: 25px;
+    // }
+  }
+}
+
+@mixin responsive-grid-columns($prefix, $max-width) {
+  @media screen and (max-width: $max-width) {
+    @for $i from 1 through 12 {
+      .grid__col--#{$prefix}-#{$i} {
+        @include grid-column($i of 12, $neat-grid);
+
+        &.grid__col--no-gutter {
+          @include grid-column($i of 12, $no-gutter-grid);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $max-width) {
+    @for $i from 0 through 12 {
+      .grid__push--#{$prefix}-#{$i} {
+        @include grid-push($i of 12, $neat-grid);
+      }
+    }
+  }
+}
+
+@include responsive-grid-columns(lg, $breakpoint-max-lg);
+@include responsive-grid-columns(md, $breakpoint-max-md);
+@include responsive-grid-columns(sm, $breakpoint-max-sm);
+@include responsive-grid-columns(xs, $breakpoint-max-xs);
