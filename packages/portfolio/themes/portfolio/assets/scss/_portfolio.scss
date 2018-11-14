@@ -51,9 +51,11 @@
             list-style-type: none;
             li {
                 display: inline-block;
+                background-color: rgb(53, 93, 146);
+                color: rgb(224, 224, 224);
             }
             a {
-                color: $color-white;
+                // color: $color-white;
             }
             span {
                 position: absolute;
@@ -82,7 +84,7 @@
         .content {
             background-color: $color-white;
             box-shadow: 0 5px 30px 10px rgba($color-black, 0.3);
-            color: rgb(230, 230, 230);
+            color: rgb(100, 100, 100);
         }
 
         .menu-button {
@@ -205,15 +207,15 @@
             background: url(../images/flexim-mockup.png) 20% 1% / cover no-repeat;
             background-position: center center;
         }
-        .menu-content {
-            li {
-                background-color: #004d52;
-            }
-        }
-        .content {
-            background-color: #004d52;
+        // .menu-content {
+        //     li {
+        //         background-color: #004d52;
+        //     }
+        // }
+        // .content {
+        //     background-color: #004d52;
             
-        }
+        // }
     }
 
 
@@ -222,14 +224,14 @@
             background: url(../images/bonnemaman-mockup.png) 20% 1% / cover no-repeat;
             background-position: center center;
         }
-        .menu-content {
-            li {
-                background-color: #520000;
-            }
-        }
-        .content {
-            background-color: #520000;
-        }
+        // .menu-content {
+        //     li {
+        //         background-color: #520000;
+        //     }
+        // }
+        // .content {
+        //     background-color: #520000;
+        // }
     }
 
     .example-3 {
@@ -237,15 +239,15 @@
             background: url(../images/heraklith-mockup.png) 20% 1% / cover no-repeat;
             background-position: center center;
         }
-        .menu-content {
-            li {
-                background-color: #3d3d3d;
-            }
-        }
+        // .menu-content {
+        //     li {
+        //         background-color: #3d3d3d;
+        //     }
+        // }
 
-        .content {
-            background-color: #3d3d3d;
-        }
+        // .content {
+        //     background-color: #3d3d3d;
+        // }
     }
 
 
@@ -254,14 +256,44 @@
             background: url(../images/employerbranding-mockup.png) 20% 1% / cover no-repeat;
             background-position: center center;
         }
-        .menu-content {
-            li {
-                background-color: #e8960c;
-            }
-        }
+        // .menu-content {
+        //     li {
+        //         background-color: #e8960c;
+        //     }
+        // }
 
-        .content {
-            background-color: #e8960c;
+        // .content {
+        //     background-color: #e8960c;
+        // }
+    }
+
+    .example-5 {
+        .wrapper {
+            background: url(../images/guell-mockup.png) 20% 1% / cover no-repeat;
+            background-position: center center;
         }
+        // .menu-content {
+        //     li {
+        //         background-color: #520000;
+        //     }
+        // }
+        // .content {
+        //     background-color: #520000;
+        // }
+    }
+
+    .example-6 {
+        .wrapper {
+            background: url(../images/webolution-mockup.png) 20% 1% / cover no-repeat;
+            background-position: center center;
+        }
+        // .menu-content {
+        //     li {
+        //         background-color: #520000;
+        //     }
+        // }
+        // .content {
+        //     background-color: #520000;
+        // }
     }
 }

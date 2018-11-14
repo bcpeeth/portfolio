@@ -2,8 +2,9 @@
 
 <section class="hero">
     <div class="hero-inner">
-        <h1>My awesome website</h1>
+        <h1><span class="type-it"></span></h1>
         <h2>Look at this website and bask in its amazing glory!</h2>
+        <!-- <span class="type-it">Here is a string. <br>And here is another!</span> -->
         <a href="https://example.com/" class="cta">Go ahead...</a>
     </div>
 </section>
@@ -40,41 +41,12 @@
                 <div class="data">
                     <div class="content">
                         <span class="author">Freelance</span>
-                        <h4 class="title"><a href="#">fleximfoundation.com</a></h4>
-                        <p class="text">For this humanitary project, I was asked to help with the website. The goal here was to provide the end-user enough flexibility to use the CMS in a comfortable way.</p>
+                        <h4 class="title"><a href="http://fleximfoundation.com/">fleximfoundation.com</a></h4>
+                        <p class="text">For this humanitary project, I was in charge of creating the website. The goal here was to provide the end-user enough flexibility to use the CMS in a comfortable way.</p>
                         <label for="show-menu" class="menu-button"><span></span></label>
                     </div>
                     
                     <input type="checkbox" id="show-menu" />
-                    <ul class="menu-content">
-                        <li><a href="#" class=""><span>PHP</span></a></li>
-                        <li><a href="#" class=""><span>SCSS</span></a></li>
-                        <li><a href="#" class=""><span>HMTL</span></a></li>
-                        <li><a href="#" class=""><span>JavaScript</span></a></li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="example-4 card">
-            <div class="wrapper">
-
-                <div class="date">
-                    <span class="month">March</span>
-                    <span class="year">2018</span>
-                </div>
-
-                <div class="data">
-                    <div class="content">
-                        <span class="author">The Red Corner</span>
-                        <h4 class="title"><a href="#">employerbrandingtool.nl</a></h4>
-                        <p class="text">I was solely responsible for the creation of a new website for a
-                        world-player in isolation</p>
-                        <label for="show-menu-4" class="menu-button"><span></span></label>
-                    </div>
-                    
-                    <input type="checkbox" id="show-menu-4" />
                     <ul class="menu-content">
                         <li><a href="#" class=""><span>PHP</span></a></li>
                         <li><a href="#" class=""><span>SCSS</span></a></li>
@@ -97,9 +69,8 @@
                 <div class="data">
                     <div class="content">
                         <span class="author">The Red Corner</span>
-                        <h4 class="title"><a href="#">bonnemaman.nl</a></h4>
-                        <p class="text">I was solely responsible for the creation of a new website for a
-                        world-player in isolation</p>
+                        <h4 class="title"><a href="https://www.bonnemaman.nl/">bonnemaman.nl</a></h4>
+                        <p class="text">The brand wanted to make an impact with their new Dutch website, and we surely delivered. A great project with focus on the many details.</p>
                         <label for="show-menu-2" class="menu-button"><span></span></label>
                     </div>
                     
@@ -126,9 +97,9 @@
                 <div class="data">
                     <div class="content">
                         <span class="author">The Red Corner</span>
-                        <h4 class="title"><a href="#">heraklith.nl</a></h4>
-                        <p class="text">I was solely responsible for the creation of a new website for a
-                        world-player in isolation</p>
+                        <h4 class="title"><a href="https://heraklith.nl/">heraklith.nl</a></h4>
+                        <p class="text">I was responsible for the creation of a new website for a
+                        world-player in isolation. Defined for its complexity and technicality, this was one of those projects that makes you proud of yourself.</p>
                         <label for="show-menu-3" class="menu-button"><span></span></label>
                     </div>
                     
@@ -144,30 +115,90 @@
             </div>
         </div>
 
-        <div class="example-2 card">
+        <div class="example-4 card">
             <div class="wrapper">
-            <div class="header">
+
                 <div class="date">
-                <span class="day">12</span>
-                <span class="month">Aug</span>
-                <span class="year">2016</span>
+                    <span class="month">March</span>
+                    <span class="year">2018</span>
                 </div>
-                <ul class="menu-content">
-                <li>
-                    <a href="#" class="fa fa-bookmark-o"></a>
-                </li>
-                <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>
-                <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
-                </ul>
-            </div>
-            <div class="data">
-                <div class="content">
-                <span class="author">Jane Doe</span>
-                <h4 class="title"><a href="#">Stranger Things: The sound of the Upside Down</a></h4>
-                <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
-                <a href="#" class="button">Read more</a>
+
+                <div class="data">
+                    <div class="content">
+                        <span class="author">The Red Corner</span>
+                        <h4 class="title"><a href="https://employerbrandingmonitor.nl/">employerbrandingtool.nl</a></h4>
+                        <p class="text">I was solely responsible for the creation of a new website for a
+                        world-player in isolation</p>
+                        <label for="show-menu-4" class="menu-button"><span></span></label>
+                    </div>
+                    
+                    <input type="checkbox" id="show-menu-4" />
+                    <ul class="menu-content">
+                        <li><a href="#" class=""><span>PHP</span></a></li>
+                        <li><a href="#" class=""><span>SCSS</span></a></li>
+                        <li><a href="#" class=""><span>HMTL</span></a></li>
+                        <li><a href="#" class=""><span>JavaScript</span></a></li>
+                    </ul>
                 </div>
+
             </div>
+        </div>
+
+        <div class="example-5 card">
+            <div class="wrapper">
+
+                <div class="date">
+                    <span class="month">May</span>
+                    <span class="year">2018</span>
+                </div>
+
+                <div class="data">
+                    <div class="content">
+                        <span class="author">The Red Corner</span>
+                        <h4 class="title"><a href="#">coloniaguell.nl</a></h4>
+                        <p class="text">I was solely responsible for the creation of a new website for a
+                        world-player in isolation</p>
+                        <label for="show-menu-5" class="menu-button"><span></span></label>
+                    </div>
+                    
+                    <input type="checkbox" id="show-menu-5" />
+                    <ul class="menu-content">
+                        <li><a href="#" class=""><span>PHP</span></a></li>
+                        <li><a href="#" class=""><span>SCSS</span></a></li>
+                        <li><a href="#" class=""><span>HMTL</span></a></li>
+                        <li><a href="#" class=""><span>JavaScript</span></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="example-6 card">
+            <div class="wrapper">
+
+                <div class="date">
+                    <span class="month">May</span>
+                    <span class="year">2016</span>
+                </div>
+
+                <div class="data">
+                    <div class="content">
+                        <span class="author">Pedro Maria</span>
+                        <h4 class="title"><a href="#">webolution.nl</a></h4>
+                        <p class="text">I was solely responsible for the creation of a new website for a
+                        world-player in isolation</p>
+                        <label for="show-menu-6" class="menu-button"><span></span></label>
+                    </div>
+                    
+                    <input type="checkbox" id="show-menu-6" />
+                    <ul class="menu-content">
+                        <!-- <li><a href="#" class=""><span>PHP</span></a></li> -->
+                        <li><a href="#" class=""><span>CSS</span></a></li>
+                        <li><a href="#" class=""><span>HMTL</span></a></li>
+                        <li><a href="#" class=""><span>JavaScript</span></a></li>
+                    </ul>
+                </div>
+
             </div>
         </div>
         

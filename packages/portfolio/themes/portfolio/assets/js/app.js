@@ -1,8 +1,6 @@
 import '../scss/style.scss';
-//import 'owl.carousel/dist/assets/owl.carousel.css';
-//import 'owl.carousel';
-//import 'owl.carousel2.thumbs';
 
+import TypeIt from 'typeit';
 import ScrollReveal from 'scrollreveal';
 import InfiniteScroll from 'infinite-scroll';
 import GMaps from 'gmaps';
@@ -18,279 +16,27 @@ $('.header form input').on('focus', function(){
     $(this).attr('placeholder', $(this).data('placeholder2'));
 });
 
-
-var elem = document.querySelector('.projectlist__blocks');
-if(elem){
-  var infScroll = new InfiniteScroll( elem, {
-    // options
-    path: '.paginate-ajax li.next a',
-    append: '.projectlink',
-    history: 'push',
-    scrollThreshold: 700,
-    hideNav: '.paginate-ajax'
-  });
-
-  // element argument can be a selector string
-  //   for an individual element
-  var infScroll = new InfiniteScroll( '.projectlist__blocks', {
-    // options
-  });
-}
+new TypeIt('.type-it', {
+  speed: 100,
+  // lifeLike: false,
+  autoStart: false,
+  cursor: false,
+  // loop: true
+  })
+  
+  .type('Hi there!')
+  .pause(1500)
+  .delete(19)
+  // .options({speed: 100})
+  .type('Welcome to my website.')
 
 
-var elemSearch = document.querySelector('.infinite');
-if(elemSearch){
-  var infScroll = new InfiniteScroll( elemSearch, {
-    // options
-    path: '.pagination li.next a',
-    append: '.result',
-    history: 'push',
-    scrollThreshold: 700,
-    hideNav: '.pagination'
-  });
-
-  // element argument can be a selector string
-  //   for an individual element
-  var infScroll = new InfiniteScroll( '.infinite', {
-    // options
-  });
-}
-
-var initMap = () => {
-  var getZoom = function getZoom() {
-    if (isMobile()) {
-      return 11;
-    }
-    return 14;
-  }
-
-  var isMobile = function isMobile() {
-    return $(window).width() < 768;
-  }
-
-
-
-
-  const map = new GMaps({
-    div: '#map',
-    disableDefaultUI: true,
-    lat: 51.621116,
-    lng: 4.871725,
-    zoom: getZoom()
-  });
-
-  const styles = [
-    {
-      "featureType": "water",
-      "elementType": "geometry",
-      "stylers": [
-        {
-          "color": "#e9e9e9"
-        },
-        {
-          "lightness": 17
-        }
-      ]
-    },
-    {
-      "featureType": "landscape",
-      "elementType": "geometry",
-      "stylers": [
-        {
-          "color": "#f5f5f5"
-        },
-        {
-          "lightness": 20
-        }
-      ]
-    },
-    {
-      "featureType": "road.highway",
-      "elementType": "geometry.fill",
-      "stylers": [
-        {
-          "color": "#ffffff"
-        },
-        {
-          "lightness": 17
-        }
-      ]
-    },
-    {
-      "featureType": "road.highway",
-      "elementType": "geometry.stroke",
-      "stylers": [
-        {
-          "color": "#ffffff"
-        },
-        {
-          "lightness": 29
-        },
-        {
-          "weight": 0.2
-        }
-      ]
-    },
-    {
-      "featureType": "road.arterial",
-      "elementType": "geometry",
-      "stylers": [
-        {
-          "color": "#ffffff"
-        },
-        {
-          "lightness": 18
-        }
-      ]
-    },
-    {
-      "featureType": "road.local",
-      "elementType": "geometry",
-      "stylers": [
-        {
-          "color": "#ffffff"
-        },
-        {
-          "lightness": 16
-        }
-      ]
-    },
-    {
-      "featureType": "poi",
-      "elementType": "geometry",
-      "stylers": [
-        {
-          "color": "#f5f5f5"
-        },
-        {
-          "lightness": 21
-        }
-      ]
-    },
-    {
-      "featureType": "poi.park",
-      "elementType": "geometry",
-      "stylers": [
-        {
-          "color": "#dedede"
-        },
-        {
-          "lightness": 21
-        }
-      ]
-    },
-    {
-      "elementType": "labels.text.stroke",
-      "stylers": [
-        {
-          "visibility": "on"
-        },
-        {
-          "color": "#ffffff"
-        },
-        {
-          "lightness": 16
-        }
-      ]
-    },
-    {
-      "elementType": "labels.text.fill",
-      "stylers": [
-        {
-          "saturation": 36
-        },
-        {
-          "color": "#333333"
-        },
-        {
-          "lightness": 40
-        }
-      ]
-    },
-    {
-      "elementType": "labels.icon",
-      "stylers": [
-        {
-          "visibility": "off"
-        }
-      ]
-    },
-    {
-      "featureType": "transit",
-      "elementType": "geometry",
-      "stylers": [
-        {
-          "color": "#f2f2f2"
-        },
-        {
-          "lightness": 19
-        }
-      ]
-    },
-    {
-      "featureType": "administrative",
-      "elementType": "geometry.fill",
-      "stylers": [
-        {
-          "color": "#fefefe"
-        },
-        {
-          "lightness": 20
-        }
-      ]
-    },
-    {
-      "featureType": "administrative",
-      "elementType": "geometry.stroke",
-      "stylers": [
-        {
-          "color": "#fefefe"
-        },
-        {
-          "lightness": 17
-        },
-        {
-          "weight": 1.2
-        }
-      ]
-    }
-];
-
-  map.addStyle({
-      styledMapName:"Styled Map",
-      styles: styles,
-      mapTypeId: "map_style"
-  });
-
-
-
-  map.setStyle("map_style");
-  map.addMarker({
-    lat: 51.624116,
-    lng: 4.871725,
-    title: 'Prins Pils',
-    click: function(e) {
-      var url = 'https://maps.google.com/?saddr=current+location&daddr=Florijnstraat%202%20Oosterhout'
-
-      window.open(url, "_blank");
-    }
-  });
-};
-
-window.initMap = initMap;
 
 jQuery(document).ready(function($) {
 
   if (document.getElementById('rc-calculator') != null) {
     var iframes = iframeResizer({},'#rc-calculator');
   }
-
-
-// $('.nav-dropdown').hover(function() {
-//     $(this).find('ul').stop(true, true).slideDown(200);
-//   }, function() {
-//     $(this).find('ul').stop(true, true).slideUp(200);
-// });
 
 window.sr = ScrollReveal({reset: true});
 sr.reveal('.floating-text-box, .reveal', {
@@ -395,16 +141,6 @@ var toggleMenu = (isMenuOpen) => {
     $('body').addClass('toggled');
     $('.red span').addClass('animate');
 
-    // window.addEventListener('click', function(e){
-    //   if (document.querySelector('ul.navbar li').contains(e.target)){
-    //     // Clicked in box
-    //   } else{
-    //     document.getElementById("toggle").checked = false;
-    //     toggleMenu(false);
-
-    //   }
-    // });
-
   } else {
     document.getElementsByTagName('body')[0].style.overflow = 'auto';
     $('body').removeClass('toggled');
@@ -413,44 +149,6 @@ var toggleMenu = (isMenuOpen) => {
   }
 };
 
-
-
-
-// $('.owl-carousel').owlCarousel({
-//   items: 1,
-//   loop: true,
-//   thumbs: true,
-//   thumbsPrerendered: true
-// });
-
-
-// var menuOpen = false
-// var menuToggle = document.getElementById('menu__toggle')
-
-
-// menuToggle.addEventListener('click', function() {
-//   menuOpen ? closeMenu() : openMenu()
-// })
-
-// $('.menu__mobile li a').on('click', function(event) {
-//   closeMenu()
-//   return true;
-// });
-
-// function openMenu() {
-//   document.getElementById('menu__toggle').innerHTML = '<span class="menu__mobile__close"></span><i class="fa fa-lg fa-times" aria-hidden="true"></i>'
-//   $('#menu__mobile').stop().fadeIn(150);
-
-
-//   menuOpen = true;
-// }
-
-// function closeMenu() {
-//   $('#menu__mobile').stop().fadeOut(150);
-//   document.getElementById('menu__toggle').innerHTML = '<i class="fa fa-lg fa-bars" aria-hidden="true"></i>'
-
-//   menuOpen = false;
-// }
 
 })
 

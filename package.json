@@ -5,7 +5,8 @@
   "main": "postcss.config.js",
   "dependencies": {
     "compass": "^0.1.1",
-    "owl.carousel": "^2.2.0"
+    "owl.carousel": "^2.2.0",
+    "typeit": "^5.10.7"
   },
   "devDependencies": {},
   "scripts": {
