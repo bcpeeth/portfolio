@@ -26,10 +26,10 @@
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#ontdek">Onze bieren</a></li>
-                <li><a href="#hoe">Ons verhaal</a></li>
-                <li><a href="#bestel">Bestel hier</a></li>
-                <li><a href="#contactus">Contact</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <!-- <li><a href="#bestel">Bestel hier</a></li>
+                <li><a href="#contactus">Contact</a></li> -->
             </ul>
         </nav>
 

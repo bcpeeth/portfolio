@@ -28,7 +28,8 @@ new TypeIt('.type-it', {
   .pause(1500)
   .delete(19)
   // .options({speed: 100})
-  .type('Welcome to my website.')
+  .type('Welcome to my portfolio.')
+  // .pause(1500)
 
 
 
